@@ -22,4 +22,8 @@ const ProductSchema = new mongoose.Schema({
 
 });
 
+const schema = joi.Object({
+    productName: Joi.string().required()
+})
+
 export default mongoose.model('Product', ProductSchema);
