@@ -1,9 +1,10 @@
 import express from 'express';
-import connect from './schemas/index.js'
-import router from './routes/products.router.js'
+import connect from '../schemas/index.js'
+import router from '../routes/products.router.js'
+import 'dotenv/config'
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.SERVER_PORT;
 
 connect();
 
