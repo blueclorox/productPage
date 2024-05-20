@@ -14,12 +14,15 @@ router.post('/products', async (req, res) => {
     return res.status(201).json({status:201, message: '상품 생성 성공', data})
 })
 
-router.get('/products', (req, res) => {
-
+router.get('/products', async (req, res) => {
+    const data = await Product.find().sort({createdAt: 'desc'})
+    return res.status(200).json({status:200, message: '상품 목록 조회 성공', data})
 })
 
-router.get('/products/:id', (req,res) => {
-
+router.get('/products/:id', async (req,res) => {
+    const { id } = req.params
+    const data = await Product.findById(id).exec();
+    return res.status(200).json({status:200, message: '상품 상세 조회 성공', data})
 })
 
 router.put('/products/:id', (req,res) => {
