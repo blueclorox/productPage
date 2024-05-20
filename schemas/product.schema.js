@@ -1,6 +1,5 @@
-import { required } from 'joi';
 import mongoose from 'mongoose';
-import { PRODUCT_STATUS } from '../constants/product.constants'
+import { PRODUCT_STATUS } from '../constants/product.constants.js'
 
 const ProductSchema = new mongoose.Schema({
   productName: {

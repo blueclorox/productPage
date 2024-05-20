@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { MONGODB_NAME, MONGODB_NAME } from "../constants/env.constant";
+import { MONGODB_NAME, MONGODB_URL } from "../constants/env.constant.js";
 
 const connect = () => {
   mongoose
