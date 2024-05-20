@@ -1,11 +1,9 @@
 import mongoose from "mongoose";
-import dotenv from "dotenv";
+import { MONGODB_NAME, MONGODB_NAME } from "../constants/env.constant";
 
 const connect = () => {
   mongoose
     .connect(
-      MONGODB_URL='mongodb+srv://spartaUser:asas1214@express-mongo.vjxbyhd.mongodb.net/?retryWrites=true&w=majority&appName=Express-Mongo',
-      MONGODB_NAME='node_beginner',
       process.env.MONGODB_URL,
       {
         dbName: process.env.MONGODB_NAME,
